@@ -15,7 +15,7 @@ The Event Management API is built using **FastAPI** and provides functionality t
 ## Technologies Used
 - **FastAPI** (Python framework)
 - **SQLAlchemy** (ORM for database interactions)
-- **PostgreSQL/MySQL** (Database support)
+- **MySQL** (Database support)
 - **JWT Authentication**
 - **Passlib** (For password hashing)
 
