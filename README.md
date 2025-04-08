@@ -23,7 +23,7 @@ The Event Management API is built using **FastAPI** and provides functionality t
 
 ### Prerequisites
 - Python 3.12+
-- MySQL/PostgreSQL database
+- MySQL database
 - Virtual environment (optional but recommended)
 
 ### Steps to Run Locally
@@ -49,10 +49,7 @@ The Event Management API is built using **FastAPI** and provides functionality t
    ```python
    DATABASE_URL = "mysql+pymysql://user:password@localhost/event_management_db"
    ```
-   OR for PostgreSQL:
-   ```python
-   DATABASE_URL = "postgresql://user:password@localhost/event_management_db"
-   ```
+  
 5. Update alembic.ini
    sqlalchemy.url = mysql+pymysql://user:password@db/event_management_db
 
