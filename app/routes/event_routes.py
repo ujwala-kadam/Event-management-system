@@ -33,7 +33,11 @@ def update_event(event_id: int, event_update: EventSchema, db: Session = Depends
         setattr(event, key, value)
     db.commit()
     db.refresh(event)
-    return event
+    try:
+        return event
+    except:
+        raise HTTPException(status_code=404, detail="Event not found for given category")
+
 
 
 #list events
