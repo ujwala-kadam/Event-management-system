@@ -21,7 +21,10 @@ def create_event(event: EventSchema, db: Session = Depends(get_db), current_user
     db.add(new_event)
     db.commit()
     db.refresh(new_event)
-    return new_event
+    try:
+        return new_event
+    except:
+        raise HTTPException(status_code=404, detail="Event not found for given category")
 
 # Update Event
 @router.put("/edit/{event_id}", response_model=EventSchema)
